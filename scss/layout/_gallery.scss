@@ -1,0 +1,130 @@
+.gallery {
+  &__br-mobile {
+    display: none;
+  }
+  &__btn {
+    display: flex;
+    margin: 0 auto;
+    padding: 13.5px 40px;
+    margin-top: 44px;
+  }
+
+  h1 {
+    font-size: 52px;
+    font-weight: 400;
+    line-height: 62px;
+    text-align: center;
+  }
+  p {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  &__cards-img {
+    display: flex;
+    margin-top: 44px;
+    justify-content: center;
+    gap: 33px;
+    img {
+      transition: transform 0.4s ease-in-out, filter 0.4s ease-in-out;
+      border-radius: 12px;
+      cursor: pointer;
+      &:hover {
+        transform: scale(1.05);
+        filter: brightness(1.1);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      }
+    }
+    &__mobile {
+      display: none;
+    }
+    &__sub {
+      display: flex;
+      justify-content: center;
+
+      gap: 33px;
+      margin-top: 44px;
+
+      img {
+        border-radius: 12px;
+        transition: transform 0.4s ease-in-out, filter 0.4s ease-in-out;
+        cursor: pointer;
+        &:hover {
+          transform: scale(1.05);
+          filter: brightness(1.1);
+          box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+      }
+    }
+  }
+}
+
+@include mobile() {
+  .container {
+    width: 100%;
+    position: relative;
+  }
+  .gallery {
+    &__br-mobile {
+      display: inline;
+    }
+    &__btn {
+      display: flex;
+      margin: 0 auto;
+      padding: 13.5px 40px;
+      margin-top: 47.5px;
+    }
+
+    h1 {
+      font-size: 52px;
+      font-weight: 400;
+      line-height: 62px;
+      text-align: center;
+    }
+    p {
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 30px;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    &__cards-img {
+      display: flex;
+      flex-direction: column;
+      margin-top: 44px;
+      justify-content: center;
+      gap: 33px;
+      img {
+        display: none;
+      }
+      &__mobile {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 33px;
+
+        img {
+          width: 305px;
+          height: 285px;
+          border-radius: 12px;
+        }
+      }
+      &__sub {
+        display: flex;
+        justify-content: center;
+
+        gap: 33px;
+        margin-top: 44px;
+
+        img {
+          display: none;
+        }
+      }
+    }
+  }
+}
