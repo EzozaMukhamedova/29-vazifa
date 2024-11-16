@@ -1,0 +1,188 @@
+.modern-studio {
+  background-color: $BG-COLOR;
+  padding: 114px 0 64px 0;
+  &__wrapper {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+    gap: 87px;
+    color: white;
+  }
+  &__img {
+    img {
+      transition: 0.3s ease-in-out;
+      &:hover {
+        transform: scale(1.02);
+        cursor: pointer;
+      }
+    }
+  }
+  &__br-desktop {
+    display: none;
+  }
+  &__br-mobile {
+    display: inline;
+  }
+  &__info {
+    &__paragraph {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 32px;
+      color: $text-color-p;
+      padding-bottom: 52px;
+      &-br-desc {
+        display: none;
+      }
+      &-br-mob {
+        display: inline;
+      }
+    }
+    &__title {
+      font-size: 72px;
+      font-weight: 800;
+      line-height: 80px;
+      letter-spacing: -2px;
+      margin: 24px 0;
+      z-index: 1;
+      position: relative;
+      &::before {
+        position: absolute;
+        content: url(../../assets/icons/hero-star.svg);
+        top: -41px;
+        right: 19px;
+        z-index: -1;
+      }
+    }
+
+    &__sub-title {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 32px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #ef6d58;
+    }
+    &__desc {
+      display: flex;
+      gap: 22px;
+      padding: 112px 0 0 0;
+      img {
+        width: 48px;
+        height: 48px;
+        transition: 0.3s ease-in-out;
+        &:hover {
+          transform: scale(1.02);
+          cursor: pointer;
+        }
+      }
+      &-item {
+        display: flex;
+        flex-direction: column;
+        span:nth-child(1) {
+          color: $text-color-p;
+
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 32px;
+        }
+        span:nth-child(2) {
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 32px;
+          transform: translateX(5px);
+        }
+      }
+    }
+    &__btn a {
+      margin-top: 34px;
+      border: none;
+      transition: 0.3s ease-in-out;
+    }
+  }
+}
+
+@include mobile() {
+  .container {
+    width: 100%;
+  }
+  .modern-studio {
+    background-color: $BG-COLOR;
+    padding: 16px 0 32px 0;
+    &__wrapper {
+      display: flex;
+      flex-direction: column-reverse;
+      //   justify-content: space-between;
+      align-items: center;
+
+      color: white;
+      gap: 30px;
+    }
+
+    &__br-mobile {
+      display: none;
+    }
+    &__br-desktop {
+      display: inline;
+    }
+    &__info {
+      &__paragraph {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 32px;
+        width: 300px;
+        padding-bottom: 34px;
+        color: rgba(255, 255, 255, 0.671);
+        &-br-desc {
+          display: inline;
+        }
+        &-br-mob {
+          display: none;
+        }
+      }
+      &__title {
+        font-size: 56px;
+        font-weight: 800;
+        line-height: 64px;
+        letter-spacing: -1px;
+        &::before {
+          display: none;
+        }
+      }
+
+      &__sub-title {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 32px;
+        letter-spacing: 3px;
+
+        color: #ef6d58;
+      }
+      &__desc {
+        display: flex;
+        gap: 22px;
+        padding: 48px 0 0 0;
+
+        &-item {
+          display: flex;
+          flex-direction: column;
+          span:nth-child(2) {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 32px;
+            text-align: left;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+            transform: none;
+          }
+        }
+      }
+    }
+    &__btn {
+      margin-top: 34px;
+    }
+    &__btn {
+      padding: 17px 30px;
+    }
+  }
+}

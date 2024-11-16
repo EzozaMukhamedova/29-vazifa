@@ -1,0 +1,204 @@
+.service {
+  background-color: $table-bg-color;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__img__rectangle {
+    img {
+      transition: transform 0.3s ease-in-out;
+      &:hover {
+        transform: scale(1.05);
+        cursor: pointer;
+      }
+    }
+  }
+  &__content {
+    span {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 32px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: $red-color;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 56px;
+      font-weight: 800;
+      line-height: 64px;
+      letter-spacing: -1px;
+      color: $text-color;
+      margin-bottom: 26px;
+      width: 470px;
+    }
+
+    p {
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 32px;
+      color: $text-color;
+      width: 470px;
+    }
+
+    .service__testimonial {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      border-radius: 10px;
+
+      &__image {
+        img {
+          width: 64px;
+          height: 64px;
+          border-radius: 50%;
+          padding: 5px;
+          transition: transform 0.3s ease-in-out;
+
+          &:hover {
+            transform: scale(1.1);
+            cursor: pointer;
+          }
+        }
+      }
+
+      &__desc {
+        display: flex;
+        flex-direction: column;
+
+        &__parag {
+          padding-top: 39px;
+          width: 456px;
+          color: #391400a3;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 1.8;
+          margin: 0;
+          transition: color 0.3s ease;
+
+          &:hover {
+            color: $text-color;
+            cursor: pointer;
+          }
+        }
+
+        &__name {
+          font-size: 16px;
+          font-weight: bold;
+          color: #391400;
+          margin-top: 10px;
+          margin-bottom: 36px;
+          transition: letter-spacing 0.3s ease;
+
+          &:hover {
+            letter-spacing: 1px;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include mobile() {
+  .container {
+    width: 100%;
+  }
+
+  .service {
+    background-color: $table-bg-color;
+    padding-bottom: 124px;
+
+    &__wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &__content {
+      span {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 32px;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        color: $red-color;
+      }
+
+      h1 {
+        font-size: 40px;
+        font-weight: 800;
+        line-height: 48px;
+        letter-spacing: -1px;
+        color: $text-color;
+        margin-bottom: 13px;
+        margin-top: 17px;
+        width: 340px;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: $red-color;
+        }
+      }
+
+      p {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 32px;
+        color: $text-color;
+        width: 329px;
+        margin-bottom: 0;
+        transition: transform 0.3s ease;
+      }
+
+      .service__testimonial {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        border-radius: 10px;
+
+        &__image {
+          img {
+            width: 64px;
+            height: 64px;
+            transition: transform 0.3s ease;
+
+            &:hover {
+              transform: scale(1.1);
+            }
+          }
+        }
+
+        &__desc {
+          &__parag {
+            width: 245px;
+            color: #391400a3;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1.8;
+            transition: color 0.3s ease-in-out;
+
+            &:hover {
+              color: $text-color;
+            }
+          }
+
+          &__name {
+            font-size: 16px;
+            font-weight: bold;
+            color: #391400;
+            transition: letter-spacing 0.3s ease-in-out;
+
+            &:hover {
+              letter-spacing: 1px;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+}

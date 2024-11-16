@@ -1,0 +1,218 @@
+.work {
+  background-color: $table-bg-color;
+  padding-bottom: 108px;
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  hr {
+    border: none;
+    height: 1px;
+    background-color: #f3d1bf;
+    margin-top: 108px;
+    width: 100%;
+  }
+  &__left {
+    h3 {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 32px;
+      letter-spacing: 3px;
+      color: $red-color;
+      text-transform: uppercase;
+      margin-bottom: 17px;
+    }
+    h1 {
+      font-size: 40px;
+      font-weight: 800;
+      line-height: 48px;
+      color: $text-color;
+      margin-bottom: 31px;
+      transition: color 0.3s ease-in-out;
+
+      &:hover {
+        color: $red-color;
+        cursor: pointer;
+      }
+    }
+    p {
+      width: 400px;
+
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 32px;
+      margin-bottom: 28px;
+
+      color: #391400a3;
+    }
+    a {
+      color: $text-color;
+
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 32px;
+      transition: color 0.3s ease-in-out;
+      &:hover {
+        cursor: pointer;
+        color: $red-color;
+      }
+    }
+  }
+
+  &__right {
+    li {
+      display: flex;
+      gap: 66px;
+      align-items: center;
+    }
+    p:nth-child(1) {
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 32px;
+      color: $text-color;
+      position: relative;
+      margin-bottom: 80px;
+      align-items: center;
+      display: flex;
+
+      &::after {
+        content: "1";
+        position: absolute;
+        top: -17px;
+        left: -66px;
+        font-size: 72px;
+        font-weight: 800;
+        line-height: 80px;
+        letter-spacing: -2px;
+        color: $text-color;
+      }
+    }
+    h1 {
+      font-size: 72px;
+      font-weight: 800;
+      line-height: 80px;
+      letter-spacing: -2px;
+      color: $text-color;
+      margin-bottom: 32px;
+      transform: translateY(24px);
+      transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+      &:hover {
+        transform: scale(1.05) rotate(5deg);
+        color: $red-color;
+      }
+    }
+    p {
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 32px;
+      color: $text-color;
+      transition: color 0.3s ease-in-out;
+      &:hover {
+        cursor: pointer;
+        color: $red-color;
+      }
+    }
+  }
+}
+
+@include mobile() {
+  .container {
+    width: 100%;
+  }
+  .work {
+    background-color: $table-bg-color;
+    padding-bottom: 63px;
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    hr {
+      border: none;
+      height: 1px;
+      background-color: #f3d1bf;
+      margin-top: 71px;
+      width: 100%;
+    }
+    &__left {
+      h3 {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 32px;
+        letter-spacing: 3px;
+        color: $red-color;
+        text-transform: uppercase;
+        margin-bottom: 17px;
+      }
+      h1 {
+        font-size: 40px;
+        font-weight: 800;
+        line-height: 48px;
+        color: $text-color;
+        margin-bottom: 31px;
+      }
+      p {
+        width: 329px;
+
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 32px;
+        margin-bottom: 28px;
+
+        color: #391400a3;
+      }
+      a {
+        color: $text-color;
+
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 32px;
+      }
+    }
+
+    &__right {
+      padding-top: 72px;
+      li {
+        display: flex;
+        gap: 38px;
+        align-items: center;
+      }
+      p:nth-child(1) {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 32px;
+        color: $text-color;
+        position: relative;
+        margin-bottom: 32px;
+        align-items: center;
+        display: flex;
+
+        &::after {
+          content: "1 ";
+          position: absolute;
+          top: -17px;
+          left: -66px;
+
+          font-size: 72px;
+          font-weight: 800;
+          line-height: 80px;
+          letter-spacing: -2px;
+        }
+      }
+      h1 {
+        font-size: 72px;
+        font-weight: 800;
+        line-height: 80px;
+        letter-spacing: -2px;
+        color: $text-color;
+        margin-bottom: 32px;
+      }
+      p {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 32px;
+        color: $text-color;
+      }
+    }
+  }
+}

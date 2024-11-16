@@ -1,16 +1,30 @@
 @font-face {
-  font-family: Nunito-ExtraBold;
-  src: url(../../assets/fonts/Nunito-ExtraBold.otf);
+  font-family: Epilogue-ExtraBold;
+  src: url(../../assets/fonts/Epilogue-Bold.otf);
 }
 
 @font-face {
-  font-family: Quicksand-Medium;
-  src: url(../../assets/fonts/Quicksand-Medium.otf);
+  font-family: Epilogue-Medium;
+  src: url(../../assets/fonts/Epilogue-Regular.otf);
 }
 
-p, span, h3, a {
-  font-family: Quicksand-Medium;
+p,
+span,
+h3,
+a {
+  font-family: Epilogue-Medium;
 }
+
 h1 {
-  font-family: Nunito-ExtraBold;
+  font-family: Epilogue-ExtraBold;
+  transition: color 0.3s ease-in-out;
+
+  &:hover {
+    color: $red-color;
+    cursor: pointer;
+  }
+}
+
+ul {
+  list-style: none;
 }

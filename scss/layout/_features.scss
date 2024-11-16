@@ -1,0 +1,168 @@
+.features {
+  background-color: $table-bg-color;
+  padding-bottom: 202px;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__right__img {
+    img {
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        transform: scale(1.05);
+        cursor: pointer;
+      }
+    }
+  }
+  &__left {
+    span {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 32px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: $red-color;
+      transition: color 0.3s ease-in-out;
+
+      &:hover {
+        color: darken($red-color, 10%);
+      }
+    }
+
+    h1 {
+      font-size: 56px;
+      font-weight: 800;
+      line-height: 64px;
+      letter-spacing: -1px;
+      color: $text-color;
+      margin-bottom: 26px;
+      margin-top: 20px;
+      width: 500px;
+      transition: color 0.3s ease-in-out;
+
+      &:hover {
+        color: $red-color;
+      }
+    }
+
+    p {
+      width: 470px;
+      color: $text-color;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 32px;
+      margin-bottom: 24px;
+    }
+
+    li {
+      margin-bottom: 16px;
+
+      a {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 32px;
+        color: #391400a3;
+        padding-left: 48px;
+        position: relative;
+        transition: color 0.3s ease-in-out;
+
+        &:hover {
+          color: $red-color;
+        }
+
+        &::before {
+          content: url(../../assets/icons/features-check.svg);
+          position: absolute;
+          top: -9px;
+          left: 0;
+        }
+      }
+    }
+  }
+}
+
+@include mobile() {
+  .container {
+    width: 100%;
+  }
+
+  .features {
+    background-color: $table-bg-color;
+    padding-bottom: 128px;
+
+    &__wrapper {
+      display: flex;
+      align-items: center;
+      flex-direction: column-reverse;
+      justify-content: space-between;
+    }
+
+    &__left {
+      span {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 32px;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        color: $red-color;
+        transition: color 0.3s ease-in-out;
+
+        &:hover {
+          color: darken($red-color, 10%);
+        }
+      }
+
+      h1 {
+        font-size: 40px;
+        font-weight: 800;
+        line-height: 48px;
+        letter-spacing: -1px;
+        color: $text-color;
+        margin-bottom: 26px;
+        margin-top: 20px;
+        width: 275px;
+        transition: color 0.3s ease-in-out;
+
+        &:hover {
+          color: $red-color;
+        }
+      }
+
+      p {
+        width: 329px;
+        color: $text-color;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 32px;
+        margin-bottom: 24px;
+      }
+
+      li {
+        margin-bottom: 16px;
+
+        a {
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 32px;
+          color: #391400a3;
+          padding-left: 48px;
+          position: relative;
+          transition: color 0.3s ease;
+
+          &:hover {
+            color: $red-color;
+          }
+
+          &::before {
+            content: url(../../assets/icons/features-check.svg);
+            position: absolute;
+            top: -9px;
+            left: 0;
+          }
+        }
+      }
+    }
+  }
+}
